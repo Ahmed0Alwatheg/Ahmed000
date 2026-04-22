@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعليم Termux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>تعليم Termux 💻</h1>
+        <p>دليلك السريع لأهم أوامر Termux على الأندرويد</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-btn active" data-target="basics">البداية</button>
+        <button class="tab-btn" data-target="files">الملفات</button>
+        <button class="tab-btn" data-target="packages">الحزم</button>
+        <button class="tab-btn" data-target="tools">أدوات مهمة</button>
+    </nav>
+
+    <main>
+        <section id="basics" class="content active">
+            <h2>البداية مع Termux</h2>
+            <ul>
+                <li><strong>شنو Termux؟</strong> تطبيق طرفية لينكس للأندرويد بدون روت</li>
+                <li><strong>أول أمر لازم تكتبه:</strong> <code>termux-setup-storage</code> عشان يسمح بالوصول للملفات</li>
+                <li><strong>تحديث الحزم:</strong> <code>pkg update && pkg upgrade</code></li>
+            </ul>
+            <div class="code-box">
+                <p>انسخ والصق في Termux:</p>
+                <code>pkg update -y && pkg upgrade -y</code>
+                <button class="copy-btn" data-code="pkg update -y && pkg upgrade -y">نسخ</button>
+            </div>
+        </section>
+
+        <section id="files" class="content">
+            <h2>أوامر الملفات والمجلدات</h2>
+            <table>
+                <tr>
+                    <th>الأمر</th>
+                    <th>الوظيفة</th>
+                </tr>
+                <tr>
+                    <td><code>ls</code></td>
+                    <td>عرض الملفات</td>
+                </tr>
+                <tr>
+                    <td><code>ls -a</code></td>
+                    <td>عرض الملفات المخفية</td>
+                </tr>
+                <tr>
+                    <td><code>cd اسم_المجلد</code></td>
+                    <td>الدخول لمجلد</td>
+                </tr>
+                <tr>
+                    <td><code>cd ..</code></td>
+                    <td>الرجوع خطوة</td>
+                </tr>
+                <tr>
+                    <td><code>mkdir اسم</code></td>
+                    <td>إنشاء مجلد جديد</td>
+                </tr>
+                <tr>
+                    <td><code>rm اسم_الملف</code></td>
+                    <td>حذف ملف</td>
+                </tr>
+                <tr>
+                    <td><code>rm -rf اسم_المجلد</code></td>
+                    <td>حذف مجلد كامل</td>
+                </tr>
+                <tr>
+                    <td><code>pwd</code></td>
+                    <td>معرفة مكانك الحالي</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="packages" class="content">
+            <h2>تثبيت الحزم والبرامج</h2>
+            <div class="package">
+                <h3>pkg - مدير الحزم الأساسي</h3>
+                <p><code>pkg install python</code> - تثبيت بايثون</p>
+                <p><code>pkg install git</code> - تثبيت Git</p>
+                <p><code>pkg search اسم</code> - البحث عن حزمة</p>
+            </div>
+            <div class="package">
+                <h3>أشهر الحزم اللي تحتاجها</h3>
+                <div class="code-box">
+                    <code>pkg install python nodejs php git nano vim wget curl</code>
+                    <button class="copy-btn" data-code="pkg install python nodejs php git nano vim wget curl">نسخ</button>
+                </div>
+            </div>
+            <p class="note">ملاحظة: استخدم <code>-y</code> عشان يوافق تلقائياً مثل: <code>pkg install python -y</code></p>
+        </section>
+
+        <section id="tools" class="content">
+            <h2>أدوات مهمة وسكربتات</h2>
+            <ul>
+                <li><strong>محاكاة Kali:</strong> <code>pkg install root-repo && pkg install metasploit</code></li>
+                <li><strong>سيرفر محلي:</strong> <code>pkg install apache2</code> ثم <code>apachectl start</code></li>
+                <li><strong>محرر نصوص:</strong> <code>nano file.txt</code> أو <code>vim file.txt</code></li>
+                <li><strong>تحميل ملفات:</strong> <code>wget رابط_الملف</code></li>
+                <li><strong>استنساخ من GitHub:</strong> <code>git clone رابط_المستودع</code></li>
+            </ul>
+            <div class="code-box">
+                <p>تثبيت Python وتشغيل سكربت:</p>
+                <code>pkg install python -y && python script.py</code>
+                <button class="copy-btn" data-code="pkg install python -y && python script.py">نسخ</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Termux = قوة اللينكس في جيبك</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
